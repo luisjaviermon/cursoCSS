@@ -1,0 +1,110 @@
+/*
+    son elementos que se activan al momento en el usuario interactua con el contenido marcado por estos
+    
+    es aplicable a cualquier elemento sin importar la jerarquia que posea 
+
+    no es obligatorio que haya un selector para poder usarlo 
+*/
+/* 
+->dinamicos: estas son aplicados cuando el usuario realiza cierta accion sobre el elemento */
+
+.link:link{ /* aplica los estilos de abajo a los enlaces no visitados */
+    color: red;
+}
+
+.link:visited{ /* aplica los efectos de abajo a los enlaces ya visitados */
+    color: chartreuse;
+}
+
+.link:active{ 
+    color:cyan;
+    background: red;
+}
+
+.button{
+    text-decoration: none;
+    color: white;
+    background: red;
+    display: inline-block;
+    padding: 0.5em;
+    border-radius: 10px;
+
+}
+
+.button:active{ /* aplica los estilos cuando el enlace esta siendo usado */
+    transform: scale(0.9);
+}
+
+.title:hover{
+    color: blueviolet;
+}
+
+.button:hover{ /* aplica los estilos a los elementos cuando el raton esta sobre este */  
+    color: red;
+    background: white;
+    border: 1px solid;
+    border-radius: 10px;
+}
+
+.input:focus{ /* aplica los estilos cuando el elemento se selecciona o esta seleccionado de manera continua */
+    background: cadetblue ;
+    color: white;
+}
+
+.text{
+    /* margin-top: 900px;
+    margin-bottom: 900px; */
+    background: red;
+}
+
+.menu{
+    display: block;
+    padding: 1.4em;
+    background: lightblue;
+    text-decoration: none;
+    text-align: center;
+    position: fixed;
+    width: 100%;
+    top: 0;
+}
+
+.span{
+    display: block;
+}
+
+/* 
+->de target u objetivo(enlaces que te llevan a cualquier parte de la pagina ): los estilos se aplicaran al target */
+
+.text:target{/* aplica los estilos al elemento si es fijado como un objetivo */
+    background: white; 
+    padding-top: 75px;
+    color: green;
+}
+
+/* ->de lenguaje: aplica los estilos a los elementos que cumplan que tengan el lenguaje especificado */
+
+span:lang(es){
+    color: red;
+}
+
+span:lang(en){
+    color: lightseagreen;
+}
+
+.input2{
+    display: block;
+}
+/* 
+los de tipo formulario son aplicados a los campos de un formulario dependiendo de su estado */
+
+.input2:enabled{ /* aplica los estilos pertenecientes a los campos que esten habilitados  */
+    background: red;
+}
+
+.input2:disabled{ /* aplica los estilos a los camopos que esten deshabilitados */
+    background: yellow ;
+}
+
+
+
+

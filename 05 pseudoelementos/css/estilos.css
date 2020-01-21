@@ -1,0 +1,34 @@
+/*
+    elementos encargados de dar estilos a una seccion especifica de un elemento
+
+    -> ::first-line: da estilos a la primera linea de un elemento bloque
+    -> ::first-letter: da estilos a la primera letra de un elemento bloque 
+    -> ::before
+    -> ::after
+        ambos elementos se encargan de dibujar cualquier elemento antes o despues de este
+
+    -> ::selection: el atributo selection aplica estilos al momento de seleccionar contenido de la pagina 
+
+*/
+
+.title::first-letter{
+    color: gold;
+    font-size: 3em;
+}
+
+.text::first-line{
+    color: brown;
+}
+
+.text::selection{
+    color: white;
+    background: darkcyan;
+}
+
+.dolar::before,.dolar::after{
+    content: '';
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    background: red;
+}

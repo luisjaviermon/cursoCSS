@@ -1,0 +1,27 @@
+/* La propiedad Display lo que hace es configurar el comportamiento que tandran las cajas respecto a las demas de su entorno 
+    -> inline: hace que el elemento se conporte como un elemento en linea 
+    
+    -> block: permite que un elemento tenga un comportamiento en bloque
+
+    -> inline-block: permite a un elemento tener un comportamiento en linea, asi como el poder modificar el ancho y el largo
+
+    -> none: oculta el elemento 
+
+    -> table: imita el comportamiento de un a tabla
+    
+    -> list-item: imita el comportamiento de una tabla
+
+    * a los elementos en linea tienen efecto con margin verticales 
+*/
+
+.inline{
+    background: darkcyan;
+    display: inline-block;
+    padding-bottom: 3em; 
+    padding-left: 2em;
+}
+
+.block{
+    background: darkorange;
+    display: none;
+}
