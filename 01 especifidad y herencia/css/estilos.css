@@ -1,0 +1,40 @@
+/*
+    *herencia: atriuto que obliga a un elemento a heredar la propiedad de su elemento padre. SE usa con la palabra inherit.
+
+    *Cascada: Es el oreden en el cual se va a ejectar el codigo. Los estilos se leen de arriba hacia abajo, y si existe un conflicto en los estilos, los que esten mas abajo sobrescriniran a los anteriores.
+
+    *especifidad: es el peso de los atributos al momento de existir conflictos de estilos
+    
+    -> etiqueta:                        1
+    -> clases y pseudoclases            10
+    -> id:                              100
+    -> estilos de linea:                1000
+    -> !important :                     prioridad ante todos
+
+    * la especifidad tiene mayor prioridad que la cascada
+
+    -> jerarquia de prioridad
+        importatnr
+        especifidad
+        cascada
+*/
+
+p{
+    color: brown !important;  /*hace que todos esten en cafe*/
+}
+
+#parrafo{
+    color: grey; /*al usar el id parrafo se le agrega un paso de 1000 -> elude a la cascada y supera a la clase parrafo*/
+}
+
+.parrafo{
+    color: red; /*Supera el peso de una etiqueta simple pero inferior a un estilo de linea*/
+}
+
+a{
+    color: inherit; /*Hereda el atributo de su elepento padre (en este caso p)*/
+}
+
+p{
+    color: green;
+}
