@@ -91,7 +91,7 @@ span:lang(en){
     color: lightseagreen;
 }
 
-.input2{
+.input2,.label{
     display: block;
 }
 /* 
@@ -103,6 +103,10 @@ los de tipo formulario son aplicados a los campos de un formulario dependiendo d
 
 .input2:disabled{ /* aplica los estilos a los camopos que esten deshabilitados */
     background: yellow ;
+}
+
+.input2:checked + label{ 
+    font-size: 2em;
 }
 
 
