@@ -1,0 +1,79 @@
+[class^="bg-"]{
+    display: flex;
+    flex-wrap: wrap;
+    width: 50%;
+    margin: 0 auto;
+    height: 150px;
+    border: 1px solid red;
+}
+
+body{
+    padding-bottom: 50em;
+    text-align: center;
+}
+
+.bg-color{
+    background-color:purple;
+}
+
+.bg-image{
+    background-image: url(../img/logo2.jpg);
+}
+
+.bg-size{ 
+    /* permite ajustar la imagen de varios parametros
+    *x [y] -> permite el ajuste de los ejes x como y (opcionalmente) 
+    
+    *cover -> permite que la imagen abarque todo el contenedor aun si se llega a deformar
+
+    *contain -> ajusta la imagen al contenedor de sin que se pierdan las dimensiones */
+    
+    background-image: url(../img/logo.png);
+    background-size: contain; 
+
+}
+
+.bg-repeat{
+    /* permite modificar el modo en el cual va a mostrarse la imagen 
+
+    *repeat -> en caso de que la imagen no cubra totalmente al contenedor esta se repetira en todo el contenedor
+
+    *no-repeat->la imagen no se repite por ningun motivo 
+
+    *repeat-x: unicamente se repite la imagen por el eje x del contenedor
+
+    +repeat-y-> repite la image solo por el eje y  */
+
+    background-image: url(../img/logo.png);
+    background-size: contain;
+    background-repeat: repeat-x;
+}
+
+.bg-position{
+
+    /* establece la posicion en la cual se va a ubicar la imagen 
+    
+    left top bottom right center 
+    
+    %x %y
+    
+    initial -> la mantiene en su posicion original
+
+    inherit ->coloca la imagen en la posicion del padre  */
+
+    background-image: url(../img/logo.png);
+    background-size: 35%;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.bg-clip{    
+    border: 10px dotted red;
+    background-color: blue;
+    background-clip: content-box;
+    padding: 25px;
+}
+
+.bg-origin{ }
+
+.bg-attachment{}

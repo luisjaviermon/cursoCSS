@@ -1,0 +1,25 @@
+:root{
+    --color: rgb(62, 196, 114);
+    --border: 3px solid yellow;
+}
+
+.parrafo{
+    color: var(--color);
+}
+
+.article{
+    --color: red;
+    color: var(--color);
+}
+
+.check:checked + .box{
+    --color: purple;
+
+}
+
+.box{
+    width: 100px;
+    height: 100px;
+    background: var(--color);
+    border: var(--border);
+}
