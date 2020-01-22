@@ -52,8 +52,8 @@
 }
 
 .text{
-    /* margin-top: 900px;
-    margin-bottom: 900px; */
+    margin-top: 900px;
+    margin-bottom: 900px;
     background: red;
 }
 
@@ -105,10 +105,93 @@ los de tipo formulario son aplicados a los campos de un formulario dependiendo d
     background: yellow ;
 }
 
-.input2:checked + label{ 
+.input2:checked + label{/*  aplicado a los checkbox cuando estan seleccionados */
     font-size: 2em;
 }
 
+.input2:in-range{ /* aplicado a los campos numericos en los cuales si esta dentro del rango permitira la aplicacion de los estilos  */
+    background: brown;
+}
 
+.input2:out-of-range{ /* aplica los efectos cuando el campo numerico esta fuera del rango */
+    background: cornflowerblue;
+}
 
+.input2:valid{ /* aplica los estilos cuando el contenido del campo esta dentro del formato solicitado  */
+    background: pink;
+}
+
+.input2:invalid{ /* aplica los efectos si el formato del contenido no es el solicitado */
+    background: darkkhaki;
+}
+
+/* 
+los de estructura son aquellos relacionados a la estructuras del html */
+
+/* :root{ esta pseudoclase es semejante a usar la etiqueta html solo que con una mayor especifidad 
+    background: yellow;
+} */
+
+.parrafo{
+    padding: 0.5em;
+    background: lightblue;
+}
+
+.parrafo:empty{ /* aplica los estilos cuando el elemento no tiene ningun contenido */
+     /* padding: 0; */
+     all: unset; /* resetea a los estilos por defecto del elemento  */
+}
+
+/* de herencia: estas pseudoclases son relacionadas a los elementos hijos de la etiqueta, sin importar que tipo de etiqueta hijo es 
+
+NOTA: es importante dar a notar que el uso de este tipo de pseudoclases seran validas para cualquiera de los elementos que esten detro de una etiqueta*/
+
+.contenedor1 .parrafo:first-child{ /* aplica los estilos al primer hijo */
+    background: lightgreen;
+}
+
+.contenedor1 .parrafo:last-child{ /* aplica los estilos al ultimo hijo */
+    background: limegreen;
+}
+
+.contenedor2 .parrafo:nth-child(odd){ /* aplica los estilos a los hijos que son pares */
+    background: red;
+}
+
+.contenedor2 .parrafo:nth-child(even){/*  aplica los estilos a los hijos impares */
+    background: cyan;
+}
+
+.contenedor1 .parrafo:nth-child(4){/*  los estilos se aplican al hijo especificado  */ 
+    background: maroon;
+    color: #f2f2f2;
+}
+
+.contenedor1 .parrafo:nth-child(3n){ /* los estilos se aplican a los elementos hijos de la serie especificada. (3n = 0,3,6,9,...) */
+    background: mediumturquoise;
+}
+/* 
+:nth-last-child() realiza lo mismo que :nth-child() solo que iniciando desde el el ultimo hijo */
+
+.contenedor .parrafo:only-child{ /* plica los estilos si este es un solo elemeto hijo */
+    background: navy;
+    color: #f2f2f2;
+}
+
+/* Las pseudoclases de tipo son aquellas que lo que buscan son aquellos que son del mismo tipo dependiendo de cual se use sin importar que etiquta sea
+    -> :first-of-type
+    -> :last-of-type
+    -> :nth-last-of-type()
+    -> :nth-last-of-type()
+    -> :only-of-type
+*/
+
+.contenedor .second:nth-of-type(2){
+    font-size: 2em;
+    background: red;
+}
+
+.parrafo:not(.second){
+    color: navy;
+}
 
