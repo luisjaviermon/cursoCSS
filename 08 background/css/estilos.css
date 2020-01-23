@@ -67,13 +67,47 @@ body{
     background-position: center;
 }
 
-.bg-clip{    
+.bg-origin{ /* permite que el relleno abarque desde el punto que se le aplica, con la diferencia de que la imagen se ajusta a el espacio designado, y en el caso de clip la recorta. tiene las mismas opciones que en clip*/
     border: 10px dotted red;
-    background-color: blue;
-    background-clip: content-box;
+    background-image: url(../img/logo2.jpg);
+    background-origin: border-box;
+    background-repeat: no-repeat;
+    background-size: content;
     padding: 25px;
 }
 
-.bg-origin{ }
+.bg-clip{ /* propiedad encargada de ajustar el que cuanto de la caja sera acupada por el rellleno de esta  
+    
+    ->Border-box: permite que el relleno se aplique hasta la zona del border
 
-.bg-attachment{}
+    ->padding-box: esta propiedad permite que el relleno abarque hasta lo que abarque el padding
+
+    -contenet-box: el relleno solo abarca hasta el limite del contenido
+*/
+    border: 10px dotted red;
+    background-image: url(../img/logo2.jpg);
+    background-clip: coborderox;
+    background-repeat: no-repeat;
+    background-size: content;
+    padding: 25px;
+}
+
+.bg-attachment{ /* esta propiedad lo que permite es que la imagen pueda tener una forma de posocion respecto a su contenedor
+    ->scroll: da la propiedad de que la imagen pueda moverse mientras que se desplace la pagina
+
+    ->fixed: permite que la imagen pueda mantenerse fija mientras que uno se desplaza por la pagina  */
+    width: 100%;
+    height: 300px;
+    background-image: url(../img/logo2.jpg);
+    background-size: cover;
+    background-attachment:fixed;
+}
+
+.bg-multiple{/* 
+    la propiedad de background-image permite que existan varias imagenes dentro de un mismo contenedor */
+
+    background-image: url(../img/logo.png),url(../img/logo2.jpg);
+    width: 90%;
+    height: 300px;
+    background-size: contain,10%;
+}
