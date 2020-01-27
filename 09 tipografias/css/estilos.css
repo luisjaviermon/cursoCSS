@@ -1,0 +1,57 @@
+/* tipografias: son los tipos de letras que se pueden ver dentro de un texto, tambien se le llaman fuentes
+
+->Se pueden dividir en dos grupos:
+    -> familias tipograficas: fuentes especificas con nombre (eg. arial)
+    -> familias genericas: fuentes que tienen caracteristicas (eg. sans-serif)
+        serif: Tienen un adorno en los remates
+        sans-serif: Tienen un corte seco en los remates
+        cursive: emulan tipografia manuscrita
+        fantasy: Letra decorativa
+        monospace: Todos los caracteres tienen el mismo ancho
+    *NOTA: Todos los navegadores contienen estas tipografias
+
+*Al momento de elegir una fuente se debe de tener tambien fuentes de reserva
+
+*si el nombre de la fuente tiene espacios se debe de colocar dentro de comillas, simples o dobles */
+
+body{
+    font-size: 30px;
+}
+
+.title{
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif; /* permite establecer una familia tipografica */
+    font-size: 10vmin;
+    /* 
+    --Estas fuentes son relativas a las medidas de la ventana 
+    ->vw: medida relativa al ancho de la ventana
+    ->vh: medida relativa al alto de la ventana 
+    ->vmin: medida relativa al valor minimo de la ventana 
+    ->vmax: medida relativa al valor maximo de la ventana 
+    */
+}
+
+.span{
+    font-size: 2em; /* esta propiedad permite que se defina el tamaño de esta
+
+    --Todas estas medidas las toman en referencia a una fuente (a excepcion de px)
+
+    -> px: medida absoluta del los navegadores 
+    -> em: medida que escala en base a la tamaño de la fuente establecida en el padre
+    -> rem: medida que se basa en el tamaño de la fuente del html, es decir, del body
+    -> %: esta medida es muy similar al em 
+    */
+}
+
+.paragraph{
+    font-weight: normal; /* estilo para dar grosor al la fuente
+
+    ->bold: coloca la fuente en negritas
+    ->normal: coloca el grosor por defecto*/
+
+    font-style: oblique; /* estilo que da la decoracion de la tipografia
+
+    -> normal: decoracion por defecto
+    -> italic: decoracion en italicas
+    -> oblique: permite una inclinacion especifica y uniforme */
+
+}
