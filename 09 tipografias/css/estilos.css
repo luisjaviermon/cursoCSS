@@ -55,3 +55,47 @@ body{
     -> oblique: permite una inclinacion especifica y uniforme */
 
 }
+
+.title2{
+    text-transform: uppercase; /* este estilo permite el cambio de las letras segun se indica. Aplica a elementos en linea y en bloque
+
+    ->uppercase: todas las letras se convierten a mayusculas
+    ->lowercase: todas las letras se pasan a munusculas
+    ->capitalize: la primer letra se pasa a mayuscula  */
+}
+
+.paragraph2{
+    text-align: left; /* propiedad para alinear el texto. aplica solo a los elementos en bloque
+
+    ->left: estilo por defecto que permite que se alinea a la izquierda
+
+    ->right: alinea el texto a la derecha
+
+    ->center: centra el texto
+
+    ->justify: justifica el texto  */
+
+    text-indent: 4%; /* coloca un espacio en el la primera linea. aplica solamente a los elementos de bloque */
+
+    letter-spacing: 20px; /* coloca un espacio entre las letras de todo el texto  */
+
+
+}
+
+.link{
+    text-decoration: none; /* estilo encargado de dar decoraciones al texto. Aplica a todos los elementos
+
+    ->overline: la linea se coloca sobre el texto
+    ->underline: subraya el texto
+    ->line-through: tacha el texto 
+    ->none: no coloca ninguna decoracion   */
+}
+
+.box{
+    width: 100px;
+    height: 100px;
+    background: red;
+    line-height: 100px; /* determina el alto de linea entre textos. Si se le coloca el mismo valor que el alto del contenedor se centra (aplica solo si se trata de una linea) */
+}
+
+

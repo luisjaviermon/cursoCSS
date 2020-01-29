@@ -1,0 +1,12 @@
+@font-face{
+    src: url('../assets/fonts/balonku/Balonku-Regular.ttf');
+    font-family: fuente;
+}
+
+.title{
+    font-family: fuente, sans-serif;
+}
+
+.paragraph{
+    font-family: 'Monserrat', sans-serif;
+}
