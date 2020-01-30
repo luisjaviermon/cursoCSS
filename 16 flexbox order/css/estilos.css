@@ -1,0 +1,34 @@
+.flex-container {
+    background-color: #FCA17D;
+    height: 300px;
+    width: 30%;
+    display: flex;
+}
+
+.flex-item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 150px;
+    height: 50px;
+    color: aliceblue;
+    background-color: #9A348E;
+}
+
+.flex-item:nth-child(2) {
+    background: lightseagreen;
+    /* flex-grow: 1; */ /* propiedad que permite que el elemeto pueda tomar como ancho el espcacio sobrante. Si hay mas de dos elementos con esta propiedad el espacio lo divide entre el total y lo distribuye de manera solicitada  */
+
+    /* flex-shrink: 3; */ /* en caso de que la medida de ancho del elemento sobrepase el de su contenedor, esta propiedad indica cuanto ancho se va a perder */
+
+    flex-basis: 500px; /* establece el la medida relativa al main axis antes de que se encoja o estire. Tiene un mayor peso que width 
+} */
+
+.flex-item:nth-child(3) {
+    background: lightskyblue;
+    flex-grow: 2;
+}
+
+.flex-item:first-child {
+    background: darkgoldenrod;
+}
