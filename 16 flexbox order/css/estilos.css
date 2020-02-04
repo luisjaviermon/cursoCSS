@@ -21,14 +21,22 @@
 
     /* flex-shrink: 3; */ /* en caso de que la medida de ancho del elemento sobrepase el de su contenedor, esta propiedad indica cuanto ancho se va a perder */
 
-    flex-basis: 500px; /* establece el la medida relativa al main axis antes de que se encoja o estire. Tiene un mayor peso que width 
-} */
+    /* flex-basis: 500px; */ /* establece el la medida relativa al main axis antes de que se encoja o estire. Tiene un mayor peso que width 
+*/} 
+
+/* el atributo flex es un acortador de las propiedades flex-grow, flex-shrink y flex-basis en ese orden. Por defecto es 
+    flex: 0 1 auto;
+    * Es obligatorio que se coloque minimo el primer valor (flex-grow) y los demas se colocaran por defecto.
+
+    Se recomienda el uso de esta forma por temas de rendimiento 
+*/
 
 .flex-item:nth-child(3) {
     background: lightskyblue;
-    flex-grow: 2;
+    order: 2;
 }
 
 .flex-item:first-child {
     background: darkgoldenrod;
+    order: 3; /* propiedad en la cual se le agrega un  peso el cual determina la posicion del objeto */
 }
