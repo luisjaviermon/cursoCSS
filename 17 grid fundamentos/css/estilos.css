@@ -1,0 +1,29 @@
+body{
+    font-family: sans-serif;
+    background-image: radial-gradient(circle,#b94bf8, #3a1957);
+    background-repeat: no-repeat;
+    margin: 0;
+    color: #eee;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.grid-container{
+    display: grid; /* por defecto solo coloca una columna*/
+    grid-template-columns: 100px 100px 100px 100px; /* establece el numero de columnas y sus medidas */
+    grid-template-columns: 100px 100px 100px 100px; /* establece el numero de filas que habra y su tamaño */
+    grid-gap: 10px; /* coloca el tamaño de separacion entre celdas.
+    esto es un acortador para la opcion de grid-column-gap y grid-row-gap */
+
+}
+
+.grid-item{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid;
+    padding: 1rem;
+    font-size: 2rem;
+}

@@ -1,0 +1,30 @@
+body{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    color: #eee;
+    font-family: sans-serif;
+    background-image: radial-gradient(circle,#b94bf8, #3a1957);
+    background-repeat: no-repeat;
+}
+
+.grid-container{
+    display: grid; 
+    grid-template-columns: repeat(1,100px 200px);
+    /* medidas para la cuadricula 
+        fr: del espacio total se divide entre el total de fr declarados y reparte la divicion por cada elemento segun su cantidad declarada
+        auto: medida que se asigna solo al final cuando se le coloca unicamente el espacio sobrante, lo minimo que puede caber es lo que abarque su contenido
+        repeat(): podemos repetir medidas o patrones:
+            repeat(nColumnas o nFilas o numero de veces que se repetira, medida 1 medida 2) 
+    */
+}
+
+.grid-item{
+    border: 1px solid;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem;
+    font-size: 2rem;
+}
