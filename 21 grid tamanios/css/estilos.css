@@ -1,0 +1,31 @@
+body{
+    font-family: sans-serif;
+    background-image: radial-gradient(circle,#b94bf8, #3a1957);
+    background-repeat: no-repeat;
+    margin: 0;
+    color: #eee;
+    height: 100vh;
+}
+
+.grid-container{
+    display: grid; /* por defecto solo coloca una columna*/
+    grid-gap: 2px;
+    grid-template-columns: repeat(auto-fit, minmax(50px,30vh)); /* establece el minimo y el maximo que puede tener un grid, minmax(minimo,maximo)  en caso de estar entre este rango se adaptara a la pantalla del navegador
+    
+    dentro de las palabras reservadas existen dos
+    -> min-content: establece el tamaño minimo para que el contenido se visualice bien
+    -> max-content: establece el maximo en el cual el contenido se visualice bien (que el contenido se mantenga una fila)
+    -> auto-fill: Crea tantos grid-items vacios como quepan en el viewport respetando las medidas.
+    -> auto-fit: agranda 
+    */
+}
+
+.grid-item{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid;
+    padding: 1rem;
+    font-size: 2rem;
+}
+

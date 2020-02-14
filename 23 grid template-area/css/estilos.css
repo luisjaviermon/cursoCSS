@@ -1,0 +1,28 @@
+
+body {
+    height: 100vh;
+    color: #eee;
+    font-family: sans-serif;
+    background-image: radial-gradient(circle, #b94bf8, #3a1957);
+    background-repeat: no-repeat;
+}
+
+
+.main{
+    display: grid;
+}
+
+.header, .footer{
+    padding: 2rem;
+    text-align: center;
+    background: peru;
+}
+
+.header{}
+
+.aside{
+    background-color: hotpink;
+    padding: 0 2rem;
+    display: flex;
+    align-items: center;
+}

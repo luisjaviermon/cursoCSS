@@ -18,16 +18,17 @@ body{
     grid explicito: es el grid que uno declara 
     grid implicito: es el grid aplicado a los elementos que no son afectados por el grid explicito 
     */
-    grid-auto-rows: 200px; /* permite designar un tamaño a las filas que no son afectadas por el explicit grid */
+   /*  grid-auto-columns: 200px; */ /* permite designar un tamaño a las filas que no son afectadas por el explicit grid */
    /*  grid-auto-columns: ; */ /* designa estilos a los elementos que no son afectados por el explicit grid  */
 
     /* en caso de que algunas celdas no encajen con los estilos solicitados estos se colocan como filas por defecto  */
-    grid-auto-flow: column;/*  establece donde se van a colocar las celdas sobrantes
+    /* grid-auto-flow: column; *//*  establece donde se van a colocar las celdas con el fin de no dejar huecos
 
     dense: se decide de manera automatica en donde se va a colocar
     row: se cocan como filas extras
     column: coloca como columnas sobrantes
  */
+    grid-auto-flow: column dense;
 }
 
 .grid-item{
@@ -37,4 +38,27 @@ body{
     border: 1px solid;
     padding: 1rem;
     font-size: 2rem;
+}
+
+.grid-item:nth-child(2) {
+    grid-column: span 3;
+    grid-row: 2 / 4;
+    background: purple;
+}
+
+.grid-item:nth-child(3) {
+    grid-column: 2 / 6;
+    background: orange;
+}
+
+.grid-item:nth-child(5) {
+    grid-column: span 5;
+    grid-row: span 2;
+    background: peru;
+}
+
+.grid-item:last-child {
+    grid-column: span 3;
+    grid-row: span 3;
+    background: royalblue;
 }

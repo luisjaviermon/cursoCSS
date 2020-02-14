@@ -1,0 +1,61 @@
+/* https://cursosgratisudemy.blogspot.com/search/label/Cursos?updated-max=2019-07-22T09%3A45%3A00-05%3A00&max-results=7#PageNo=3
+ */
+body {
+    height: 100vh;
+    color: #eee;
+    font-family: sans-serif;
+    background-image: radial-gradient(circle, #b94bf8, #3a1957);
+    background-repeat: no-repeat;
+}
+
+/* en grid se puede alinear respecto a la celda o al contenedor 
+    tiene los posibles atributos:
+    start: coloca al inicio del lugar de referencia
+    end: los coloca al final de la linea de referencia 
+
+*/
+
+.grid-container {
+    display: grid;
+    grid-gap: 10px;
+    height: 80vh;
+    border: 3px solid yellow;
+    grid-template-columns: repeat(3, 1fr);
+    /* justify-items: center; */ /* alinea los elementos horizontalmente respecto a la celda */
+    /* align-items: center; */ /* alinea los elementos verticalmente respecto al la celda */
+    /* place-items: center; */ /* engloba los alineamientos respecto a la celda (place-items: horizontal vertical;)*/
+    
+    /* en el caso de alineacion respecto al contenedor se agregan unas opciones mas
+    space-around: coloca un espacio proporcional entre el tipo de alineacion dejando un espacio en el inicio y el fin 
+    space-between: Deja el mismo espacio entre las columnas pero sin dejar espacio a los lados
+    space-evenly: permite que los elementos tengan el mismo espacio entre ellos
+    */
+    /* justify-content: space-evenly;  *//* alinea horizontalmente respecto al contenedor */    
+    /* align-content: space-around; */ /* permite el alineamiento verticalmente respecto al contenedor */
+    /* place-content: center;  *//* conbinacion de los alineamientos respecto al contenedor (place-content: horizontal vertical;) */
+    /* NOTA: se pueden conbinar ambas propiedades  */
+}
+
+.grid-item {
+    border: .5px solid;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.2rem;
+    padding: 1rem;
+}
+
+.grid-item:nth-child(2) {
+    background-color: royalblue;
+    /* todos las propiedades que se aplican a un solo elemento acepta
+    start 
+    end 
+    center 
+    strech */
+    /* align-self: start; */ /* alinea a un solo elemento verticalmente respecto a la celda */
+    /* justify-self: end; */ /* alinea horizontalmente respecto a la celda */
+    /* place-self: start end; */ /* realiza la convinacion de las dos anteriores respecto a las celda */
+    order: 1;/*  determina el peso de los elementos, si el valor es positivo lo coloca al final dependiendo del valor, si es negativo lo coloca en base al inicio:
+
+    por defecto el order es de 0 */
+}
