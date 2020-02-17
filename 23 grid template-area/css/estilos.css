@@ -10,19 +10,38 @@ body {
 
 .main{
     display: grid;
+    grid-template-columns: 300px repeat(2,1fr);
+    grid-template-areas: 
+        "cabeza cabeza cabeza"
+        "aside art art"
+        "footer footer -"
+    ; /* permite que la estructura del gri se le coloque un nombre */
 }
 
 .header, .footer{
-    padding: 2rem;
+    padding: 2rem 0;
     text-align: center;
     background: peru;
 }
 
-.header{}
+.header{
+    grid-area: cabeza; /* asigna a la seccion decidida en grid-template-areas */
+}
 
 .aside{
     background-color: hotpink;
     padding: 0 2rem;
     display: flex;
     align-items: center;
+    grid-area: aside;
+}
+
+.article{
+    grid-area: art;
+    background: royalblue;
+    padding: 1rem;
+}
+
+.footer{
+    grid-area: footer;
 }
