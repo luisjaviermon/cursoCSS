@@ -1,45 +1,50 @@
-/* las medidas mas comunes en los dispositivos moviles son:
-
--> 0-360: telefonos en modo normal
--> 480-768: telefonos acostados y tablets
--> 1024-1440: tablets grandes y portatiles no HD
--> 1920-+: portatiles HD, televisiones, etc. */
-
-.menu{
-    list-style: none;
-    margin-top: 0;
-    margin-bottom: 0;
-    padding-left: 0;
-    /* color: green; */ /* en este caso, si las propiedades no se sobrescriben estas se heredan */
-    font-size: 3rem;
+/* 
+banner con unidades de viewport
+footer siempre abajo
+responsive con flexbox
+responsive con grid
+*/
+body {
+    margin: 0;
+    color: #eee;
+    font-family: sans-serif;
+    background-image: radial-gradient(circle, #b94bf8, #3a1957);
+    background-repeat: no-repeat;
+    min-height:100vh;
+    display: flex;
+    flex-direction: column;
 }
 
-/* si nos basamos en la metodologia movile first podemos tomar en cuenta el siguiente orden */
+/* .flexbox{
+    display: flex;
+    flex-wrap: wrap;
+}
+.flexbox__item{
+    margin: 2rem;
+    min-width: 320px;
+    flex:1 1 320px;
+} */
 
-body{ /* vista de telefono */
+.grid{
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+    grid-gap: 2rem;
+    padding: 1rem;
+}
+
+.banner{
     background-color: royalblue;
+    padding: 15vmin;
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 1.5rem;
 }
 
-/* vista de tableta */
-@media screen and (min-width: 480px) /* and (max-width: 1000px) */{
-    /* en caso de usar min-width como condicional significa que la pantalla tendra un minimo de x px para realizar los estilos que estan contenidos
-    
-    en caso de que se use el max-width indica que aplicara los cambios contenidos hasta que se llegue a x px
-    
-    */
-    body{
-        background: purple;
-    }
-}
-
-/* vista de escritorio */
-@media screen and (min-width: 1400px){
-    body{
-        background-color: green;
-    }
-
-    .menu{
-        display: flex;
-        justify-content: space-evenly;
-    }
+.footer{
+    background-color: red;
+    padding: 1em;
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 1.5rem;
+    margin-top: auto;
 }
