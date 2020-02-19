@@ -1,13 +1,45 @@
-body{
-    margin: 0;
-    font-family: sans-serif;
-    background-repeat: no-repeat;
+/* las medidas mas comunes en los dispositivos moviles son:
+
+-> 0-360: telefonos en modo normal
+-> 480-768: telefonos acostados y tablets
+-> 1024-1440: tablets grandes y portatiles no HD
+-> 1920-+: portatiles HD, televisiones, etc. */
+
+.menu{
+    list-style: none;
+    margin-top: 0;
+    margin-bottom: 0;
+    padding-left: 0;
+    /* color: green; */ /* en este caso, si las propiedades no se sobrescriben estas se heredan */
+    font-size: 3rem;
 }
 
-.footer{
-    background-color: red;
-    padding: 1em;
-    text-align: center;
-    text-transform: uppercase;
-    font-size: 1.5rem;
+/* si nos basamos en la metodologia movile first podemos tomar en cuenta el siguiente orden */
+
+body{ /* vista de telefono */
+    background-color: royalblue;
+}
+
+/* vista de tableta */
+@media screen and (min-width: 480px) /* and (max-width: 1000px) */{
+    /* en caso de usar min-width como condicional significa que la pantalla tendra un minimo de x px para realizar los estilos que estan contenidos
+    
+    en caso de que se use el max-width indica que aplicara los cambios contenidos hasta que se llegue a x px
+    
+    */
+    body{
+        background: purple;
+    }
+}
+
+/* vista de escritorio */
+@media screen and (min-width: 1400px){
+    body{
+        background-color: green;
+    }
+
+    .menu{
+        display: flex;
+        justify-content: space-evenly;
+    }
 }
