@@ -1,0 +1,21 @@
+header{
+    margin-bottom: 1.5rem;
+
+    nav{
+
+        a{
+            padding: 1rem;
+            color: #fff;
+            text-decoration: none;
+            background: rgba($color-primario,0.5);
+            display: inline-block;
+            margin-right: 1em;
+            @include border-radius(50px);
+
+            &:hover{ //indicador de que se aplica al elemento padre
+                background: #ff851b;
+                text-decoration: none;
+            }
+        }
+    }
+}

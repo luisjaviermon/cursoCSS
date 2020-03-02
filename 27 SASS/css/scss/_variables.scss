@@ -1,0 +1,40 @@
+/* $color-letras: cyan;
+
+$font-family: Arial, Sans-serif;
+
+$font-size: 4rem;
+
+body{
+    background: #aaaaaa;
+}
+
+a{
+    color: $color-letras;
+    font-family: $font-family;
+}
+
+h1{
+    color: $color-letras;
+    font-size: $font-size;
+} */
+
+
+$color-primario: red;
+
+@mixin border-radius($radio){ /* son s¡milares a las funciones, en la cual, a base del parametro se rellena la propiedad con ese parametro 
+
+*acepta varios parametros
+    */
+    -webkit-border-radius: $radio;
+    -moz-border-radius: $radio;
+    -ms-border-radius: $radio;
+    border-radius: $radio;
+}
+
+%clase{ /* las clases extendidas son aquellas declaradas para poder ser heredadas por otras unicamente, se denotan por usar % en lugar de . */
+    color: blue;
+}
+
+.clase2{
+    @extend %clase; /* para invocar una clase extendida se usa el prefijo @extend */
+}
