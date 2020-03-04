@@ -17,6 +17,11 @@ body{
     grid-gap: 20px;
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: repeat(4, auto);
+
+    grid-template-areas: "header header header"
+                         "contenido contenido sidebar"
+                         "widget-1 widget-2 sidebar"
+                         "footer footer footer";
 }
 
 .contenedor > div, 
@@ -27,4 +32,77 @@ body{
     background: #fff;
     padding: 20px;
     border-radius: 4px;
+}
+
+.contenedor .header{
+    background: #12203E;
+    color: #fff;
+    grid-area: header;
+    /* grid-column-start: 1;
+    grid-column-end: -1; /* asi aseguramos que el elemento abarque todas las columnas en caso de no conocer cuantas hay*/ 
+} 
+
+.contenido{
+    grid-area: contenido;
+    /* grid-column-end: span 2; */
+}
+
+.contenedor .sidebar{
+    grid-area: sidebar;
+    /* grid-column: 3 / 4; */
+    /* grid-row: span 2; /* es recomendable no especificar en algunos casos de donde a donde va a abarcar el elemento */ 
+    min-height: 100px;
+    background: #faa43d;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.contenedor .widget-1,
+.contenedor .widget-2{
+    background: #55a8fd;
+    color: #fff;
+    height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.contenedor .widget-1{
+    grid-area: widget-1;
+}
+
+.contenedor .widget-2{
+    grid-area: widget-2;
+}
+
+.contenedor .footer{
+    background: #12203e;
+    color: #fff;
+    /* grid-column: 1 / 4; */
+    grid-area: footer;
+}
+
+/* @media screen and (max-width: 768px){
+    .contenedor .contenido{
+        grid-column: 1 / -1;
+    }
+
+    .contenedor .sidebar{
+        grid-column: 1 / -1;
+    }
+
+    .contenedor .widget-1{
+        grid-column: span 2;
+    }
+} */
+
+@media screen and (max-width: 768px){
+    .contenedor{
+        grid-template-areas: "header header header"
+                             "contenido contenido contenido"
+                             "sidebar sidebar sidebar"
+                             "widget-1 widget-1 widget-2 "
+                             "footer footer footer";
+    }
 }
